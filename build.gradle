@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17'
+    implementation 'org.openjfx:javafx-fxml:17'
+    implementation 'net.sf.py4j:py4j:0.10.9'
+}
+
+javafx {
+    version = '17'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+run {
+    jvmArgs = [
+        '-Dpython.path=/ruta/a/tu/entorno/python',
+        '-Djava.library.path=/ruta/a/tu/entorno/python/Lib/site-packages/py4j'
+    ]
+}
