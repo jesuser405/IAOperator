@@ -1,5 +1,5 @@
-from py4j.java_gateway import JavaGateway
-from transformers import pipeline
+from py4j.java_gateway import JavaGateway # type: ignore
+from transformers import pipeline # type: ignore
 import os
 
 # Configuración del modelo
